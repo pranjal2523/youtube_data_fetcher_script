@@ -35,7 +35,7 @@ Install the required libraries using `pip`:
 ```bash
     pip install google-api-python-client openpyxl python-dotenv
 ```
-3. Create a .env file in the root directory to store your environment variables (API keys, etc.).
+### 3. Create a .env file in the root directory to store your environment variables (API keys, etc.).
     ```
     API_KEY = "API_KEY_VALUE"
     ```
@@ -62,10 +62,10 @@ Install the required libraries using `pip`:
 The script is divided into several functions:
 
 1. get_channel_id_by_username(username)
-    - Fetches the channel ID for a given YouTube channel username (handle). It uses the YouTube Data API's channels().list method to get the channel ID.
+    #### Fetches the channel ID for a given YouTube channel username (handle). It uses the YouTube Data API's channels().list method to get the channel ID.
 
 2. get_videos_by_channel_id(channel_id)
-    - Fetches a list of videos from the specified channel. It retrieves details such as:
+    #### Fetches a list of videos from the specified channel. It retrieves details such as:
 
     -  Video ID
     -  Title
@@ -76,10 +76,10 @@ The script is divided into several functions:
     -  Thumbnails (default, medium, high resolution)
 
 3. save_videos_to_excel(videos, filename="youtube_videos.xlsx")
-    - Saves the fetched video details to an Excel file using the openpyxl library.
+    #### Saves the fetched video details to an Excel file using the openpyxl library.
 
 4. get_comments_by_video_id(comments, video_id, max_comments=100)
-    - Fetches the latest comments and replies for a given video ID, including details such as:
+    #### Fetches the latest comments and replies for a given video ID, including details such as:
 
     -  Comment ID
     -  Author name
@@ -100,6 +100,6 @@ The script is divided into several functions:
 
 
 ## Error Handling
-    - The script checks if a valid API key is set; otherwise, it raises a ValueError.
-    - If no channel is found for the provided username, the script notifies the user.
-    - If no comments are found, the script continues without raising an error.
+    -  The script checks if a valid API key is set; otherwise, it raises a ValueError.
+    -  If no channel is found for the provided username, the script notifies the user.
+    -  If no comments are found, the script continues without raising an error.
